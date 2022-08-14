@@ -1,0 +1,56 @@
+.login{
+    width: 750px;
+    margin: 0 auto;
+    background-color: #FBFBFB;
+    border-radius: 10px;
+    padding: 40px 140px;
+    box-shadow: 0px 0px 8px #888888;
+    text-align: left;
+    position: relative;
+  }
+
+.loginBtn{
+    color: FFB366;
+    width: 60%;
+    border-radius: 5px;
+    padding: 10px 0px;
+}
+
+label{
+    margin-top: 20px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+label:last-child{
+    margin-top: 10px;
+    font-size: 14px;
+    justify-content: center;
+    display: flex;
+    text-decoration: underline;
+}
+
+input{
+    width: 100%;
+    border: 1px #aeaeae solid; 
+    border-radius: 10px;
+    padding: 5px 5px;
+    margin-bottom: 20px;
+    
+}
+
+.horizontal-center {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 5;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+   
+    

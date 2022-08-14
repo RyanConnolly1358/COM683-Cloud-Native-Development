@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Login | Loop</title>
+
+        <!--CSS Custom Classes-->
+        <link rel="stylesheet" href="../css/login.css" />
+
+        <!--Bootstrap CSS Libraries-->
+        <link rel="stylesheet" href="../css/bootstrap-5.2.0-dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../css/bootstrap-5.2.0-dist/css/bootstrap-grid.min.css" />
+        <link rel="stylesheet" href="../css/bootstrap-5.2.0-dist/css/bootstrap-reboot.min.css" />
+        <link rel="stylesheet" href="../css/bootstrap-5.2.0-dist/css/bootstrap-utilities.min.css" />
+    </head>
+    <body>
+        
+        <div class="mt-5">
+          <div class="logo">
+            <img src="../../assets/global/loopLogo.png" id="loopIcon" alt="Decorative Shapes Icon" />
+        </div>
+            <div class="login">
+              
+              <form id="loginForm">
+                <label>Username:</label>
+                <input type="text" id="username" name="username">
+                <label>Password:</label>
+                <input type="text" id="password" name="password">
+                
+              
+              </form>
+              <div class="horizontal-center">
+                <button class="loginBtn" type="submit" form="loginForm" value="submit" id="loginButtin">
+                  Login!
+                </button>
+              </div>
+              <label onclick="document.location='signUp.html'">Sign Up</label>
+            </div>
+            <div class="mt-5"></div>
+          </div>
+        
+    </body>
+</html>
