@@ -28,21 +28,22 @@
               
               <form id="loginForm">
                 <label>Username:</label>
-                <input type="text" id="username" name="username">
+                <input type="text" id="usernameTxt" name="username">
                 <label>Password:</label>
-                <input type="text" id="password" name="password">
+                <input type="text" id="passwordTxt" name="password">
                 
               
               </form>
               <div class="horizontal-center">
-                <button class="loginBtn" type="submit" form="loginForm" value="submit" id="loginButtin">
+                <button class="loginBtn" id="loginButton">
                   Login!
                 </button>
               </div>
-              <label onclick="document.location='signUp.html'">Sign Up</label>
+              <label onclick="document.location='/src/html/signUp.html'">Sign Up</label>
             </div>
             <div class="mt-5"></div>
           </div>
         
+          <script src= "src/js/login.js"></script>
     </body>
 </html>

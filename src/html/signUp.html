@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Login | Loop</title>
+
+        <!--Bootstrap CSS Libraries-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap-grid.min.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap-reboot.min.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap-utilities.min.css" />
+
+        <!--CSS Custom Classes-->
+        <link rel="stylesheet" href="/src/css/login.css" />
+
+    </head>
+    <body>
+        
+        <div class="mt-5">
+          <div class="logo">
+            <img src="/assets/global/loopLogo.png" id="loopIcon" alt="Decorative Shapes Icon" />
+            
+          </div>
+            <div class="login">
+              
+              <form id="loginForm">
+                <label>Username:</label>
+                <input type="text" id="usernameTxt" name="username">
+                <label>Password:</label>
+                <input type="text" id="passwordTxt" name="password">
+                <label>Confirm Password:</label>
+                <input type="text" id="confirmPasswordTxt" name="password">
+                <label id="passwordLbl" hidden>Password does not match</label>
+              
+              </form>
+              <div class="horizontal-center">
+                <button class="loginBtn" id="signUpBtn">
+                  Sign Up!
+                </button>
+              </div>
+              <label onclick="document.location='/index.html'">Return</label>
+            </div>
+            <div class="mt-5"></div>
+          </div>
+        
+          <script src= "/src/js/signUp.js"></script>
+    </body>
+</html>
