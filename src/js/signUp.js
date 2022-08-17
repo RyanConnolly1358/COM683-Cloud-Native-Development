@@ -26,7 +26,6 @@ SIGNUP_BUTTON.onclick = function(){
         if(request.responseText == "\"accountCreated\": true"){
             document.location='/src/html/loops.html';
         }else{
-            SIGNUP_BUTTON.innerHTML = request.responseText;
             USERNAME_TXT.style.borderBlockColor = 'red';
             PASSWORD_LBL.innerHTML = "Username already taken";
             PASSWORD_LBL.hidden = false;

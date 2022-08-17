@@ -25,11 +25,12 @@ LOGIN_BUTTON.onclick = function checkCredentials() {
 
     request.onreadystatechange = (e) => {
         if(request.responseText == "\"matchDetermined\":true"){
+            accountName = username;
             document.location='/src/html/loops.html';
         }else{
             USERNAME_TXT.style.borderBlockColor = 'red';
             PASSWORD_TXT.style.borderBlockColor = 'red';
-
+            
         }
 
    }

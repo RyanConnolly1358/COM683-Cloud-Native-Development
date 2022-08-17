@@ -1,7 +1,12 @@
 let dropArea = document.getElementById('drop-area')
 const SUBMIT_BUTTON = document.getElementById('submitBtn')
-const inputFile = document.getElementById('fileElem')
+let inputFile = document.getElementById('fileElem')
+let DESCRIPTION_TXT = document.getElementById('descriptiontxt')
+let COMPLETE_PIC_LBL = document.getElementById('completePicLBL')
+
 var img = document.createElement('img')
+
+
 
 ;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
     dropArea.addEventListener(eventName, preventDefaults, false)
@@ -43,26 +48,51 @@ function fileDropped(e) {
 
 SUBMIT_BUTTON.onclick = function(){
     event.preventDefault();
-    
+
     if(img.src != ""){
 
         const formData = new FormData();
         
         for (const file of inputFile.files) {
             formData.append("files", file);
-            
         }
-            
+             
             fetch("https://createimageblob.azurewebsites.net/api/uploadImage?", {
                 method: "post",
                 body: formData,
-            }).catch((error) => ("Something went wrong!", error));
+            }).then((resp) => {
+                
+              });
+        
+              var data = {
+                username: accountName,
+                description: DESCRIPTION_TXT.value,
+                blobName: inputFile.files[0].name
+                };
+        
+        
+                body = JSON.stringify(data);
 
-    }else{
-        SUBMIT_BUTTON.innerHTML = "Empty"
+                //Open request and send JSON Body
+                const request = new XMLHttpRequest();
+                request.open("POST", "https://prod-54.westeurope.logic.azure.com:443/workflows/4af7d67c3cd243dda4c21a58c9e092da/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=884bUvOBvNP_N8KfwLknwkZfpAMqPwmRk4C2PfgSrus");
+                //request.setRequestHeader("Accept", "application/json");
+                request.setRequestHeader("Content-Type", "application/json");
+
+                request.send(body);
+
+                request.onreadystatechange = (e) => {
+                    COMPLETE_PIC_LBL.hidden = false;
+                    DESCRIPTION_TXT.value = "";
+                    document.getElementById('preview').removeChild(img);
+                    
+                }
+
+               
     }
-
 }
+
+
 
 
 

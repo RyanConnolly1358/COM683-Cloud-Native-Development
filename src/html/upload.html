@@ -34,22 +34,23 @@
             
             <div id="drop-area">
                 <form class="my-form">
-                  <p>Upload a picture via drag and drop or the select button!</p>
+                  <p>Upload a picture via drag and drop!</p>
                   <input type="file" id="fileElem" multiple accept="image/png, image/jpeg, image/jpg">
-                  <label class="button" for="fileElem">Select some files</label>
+                 <!-- <label class="button" for="fileElem">Select some files</label>-->
                   
                 </form>
                 <div id="preview"></div>
                 
             </div>
             <button class="button" type="submit" id="submitBtn">Upload Picture!</button>
+            <label for="" hidden class="completeLBL" id="completePicLBL">Upload Complete!</label>
         </div>
 
         <div>
             <h1 class="headers">Upload a Loop!</h1>
             <div>
                 <label class="descLBL">Enter a description:</label>
-                <input type="text" class="description" id="descriptiontxt">
+                <input type="text" class="description">
             </div>
             <div id="drop-area">
                 <form class="my-form">
@@ -73,5 +74,6 @@
     
 
     <script src= "../js/upload.js"></script>
+    <script src= "../js/global.js"></script>
 </body>
 </html>
