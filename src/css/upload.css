@@ -1,0 +1,74 @@
+.logo{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+}
+
+#drop-area {
+        border: 2px dashed #ccc;
+        border-radius: 20px;
+        width: 75%;
+        margin: 0px auto;
+        padding: 50px;
+        margin-bottom: 10px;
+}
+
+#drop-area.highlight {
+        border-color: #FFB366;
+}
+      
+.button {
+        display: block;
+        padding: 10px;
+        background: white;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        margin: auto;
+}
+
+.button:hover {
+        background: #FFB366;
+}
+
+#fileElem {
+        display: none;
+}
+
+#preview {
+        margin-top: 10px;
+}
+
+#preview img {
+        width: 150px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        vertical-align: middle;
+}
+
+.description{
+        display: block;
+        border: 1px #aeaeae solid; 
+        border-radius: 10px;
+        padding: 5px 5px;
+        width: 75%;
+        margin: 10px auto;
+}
+
+.descLBL{
+        display: block;
+        width: 75%;
+        margin: 10px auto;
+        margin-top: 10px;
+}
+
+.headers{
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+}
+
