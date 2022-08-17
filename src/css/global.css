@@ -1,34 +1,39 @@
 ul {
     list-style-type: none;
-    background-color: rgb(10, 10, 10);
+    background-color: black;
     width: 100%;
     margin: 0;
     overflow: hidden;
     display: block;
+  
     
   }
 
 
   li {
     float: left;
-    border-right: 1px solid rgb(255, 239, 239);
+    border-right: 1px solid white;
     width: 33%;
     text-align: center;
    
   }
 
   li:last-child{
+      float: left;
+      width: 33%;
       border-right: none;
-      float: right;
+      
   }
 
   li label {
     
     color: white;
     padding: 30px 150px;
-
+    font-size: larger;
+    font-weight: bold;
   }
 
   li label:hover {
-    color: rgb(207, 115, 54);
+    color: #FFB366;
+    cursor: pointer;
   }
