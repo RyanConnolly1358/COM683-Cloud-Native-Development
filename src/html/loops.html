@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="../css/bootstrap-5.2.0-dist/css/bootstrap-reboot.min.css" />
         <link rel="stylesheet" href="../css/bootstrap-5.2.0-dist/css/bootstrap-utilities.min.css" />
     </head>
-    <body>
+    <body id="loopBody">
     <!--NavigationBar-->
         <div >
             <ul>
@@ -31,21 +31,24 @@
             <div class="loop">
                 <div>
                      <img src="../../assets/test/abstract-user-flat-4.svg" height="40px" float="left" alt="Decorative Shapes Icon" />
-                     <label class="username">Ryan Connolly</label>
+                     <label class="username" id="username"> </label>
                 </div>
-                <video margin=top width="720" height="480" controls src="../../assets/test/SampleVideo_720x480_1mb.mp4" type="sample/mp4"></video>
+                <video margin=top width="720" height="480" controls src="" type="sample/mp4" id="vid"></video>
                 
-                
+                <button class="changeBtn" id="prevBtn"><-Prev </button>
+                <button class="changeBtn" id="nextBtn">Next-> </button>
             </div>
         </div>
+
+        
 
         <div class="logo">
             
             <img src="../../assets/global/loopLogo.png" alt="Decorative Shapes Icon" />
         </div>
         
-        
-        <script src= "src/js/global.js"></script>
+        <script src= "../js/loops.js"></script>
+        <script src= "../js/global.js"></script>
         
     </body>
 </html>

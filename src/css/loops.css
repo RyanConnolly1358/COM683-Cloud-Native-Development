@@ -21,3 +21,11 @@
 
 }
 
+.changeBtn{
+    color: FFB366;
+    width: 40%;
+    margin-left: 7%;
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: white;
+}

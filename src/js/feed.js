@@ -20,26 +20,6 @@ let USER_LBL5 = document.getElementById('poster5')
 
 body.onload = function(){
 
-    // var data = {
-    //     username: accountName,
-    // };
-    // body = JSON.stringify(data);
-    // //Call Logic app via username
-    // //return URL's
-    // //Populate Videos
-    // const request = new XMLHttpRequest();
-    // request.open("POST", "https://prod-147.westeurope.logic.azure.com:443/workflows/30c11ff5150849a2ae216464bf404392/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Db7ebB0DkAgKxylnOUftrGFkvw9n6jzFUV53VXtxCLA");
-    // //request.setRequestHeader("Accept", "application/json");
-    // request.setRequestHeader("Content-Type", "application/json");
-
-    // request.send(body);
-
-    // request.onreadystatechange = (e) => {
-    //     //Code to populate images
-    //     const obj = JSON.parse(request.body)
-    //     console.log(obj.username);
-    // }
-
     const formData = new FormData();
     formData.append("userName", accountName);
       
