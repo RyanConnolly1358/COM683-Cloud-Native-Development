@@ -3,6 +3,9 @@ const SUBMIT_BUTTON = document.getElementById('submitBtn')
 let inputFile = document.getElementById('fileElem')
 let DESCRIPTION_TXT = document.getElementById('descriptiontxt')
 let COMPLETE_PIC_LBL = document.getElementById('completePicLBL')
+let inputVideo = document.getElementById('fileElemVideo')
+let SUBMIT_VIDEO_BUTTON = document.getElementById('submitBtnVid')
+let VIDEO_TXT = document.getElementById('videoTxt')
 
 var img = document.createElement('img')
 
@@ -90,6 +93,42 @@ SUBMIT_BUTTON.onclick = function(){
 
                
     }
+}
+
+SUBMIT_VIDEO_BUTTON.onclick = function(){
+
+    const formData = new FormData();
+    
+
+        for (const file of inputVideo.files) {
+            formData.append("files", file);
+        }
+             
+        fetch("https://createimageblob.azurewebsites.net/api/uploadVideo", {
+            method: "post",
+            body: formData,
+        }).then((response) => {
+            
+        })
+
+        var data = {
+                    username: accountName,
+                    blobName: inputVideo.files[0].name
+                    };
+                
+                    body = JSON.stringify(data);
+
+                    //Open request and send JSON Body
+                    const request = new XMLHttpRequest();
+                    request.open("POST", "https://prod-204.westeurope.logic.azure.com:443/workflows/8214954dd4c64f53813977ad78c80686/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=0yMBa395GTpIwNYV-uIt_w4R5s1-mPouMtvrD8YFOPc");
+                    //request.setRequestHeader("Accept", "application/json");
+                    request.setRequestHeader("Content-Type", "application/json");
+
+                    request.send(body);
+
+                    request.onreadystatechange = (e) => {
+                             
+                    }
 }
 
 
