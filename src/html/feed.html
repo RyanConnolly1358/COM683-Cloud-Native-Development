@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../css/bootstrap-5.2.0-dist/css/bootstrap-reboot.min.css" />
     <link rel="stylesheet" href="../css/bootstrap-5.2.0-dist/css/bootstrap-utilities.min.css" />
 </head>
-<body>
+<body id="mainBody">
     <div >
         <ul>
             <li><label onclick="document.location='loops.html'">Loops</label></li>
@@ -27,13 +27,29 @@
 
     <div class="mt-5">
         <div class="post">
-            <img src="https://loopblobdb.blob.core.windows.net/loop-pics/testImage.jpg?sv=2018-03-28&sr=b&sig=YhmuDrE8Jievf2bbCRDYxvG1vpp27Jsb0JO%2Fx9pf2DU%3D&se=2022-08-18T19%3A46%3A59Z&sp=r" class="picture" alt="Decorative Shapes Icon" />
+            <label id="poster1" class="poster"></label>
+           <label id="description1" class="description"></label>
+            <img src="" class="picture" alt="Decorative Shapes Icon" id="img1"/>
+        </div>
+        <div class="post" >
+            <label id="poster2" class="poster"></label>
+            <label id="description2" class="description"></label>
+            <img src="" class="picture" alt="Decorative Shapes Icon" id="img2"/>
         </div>
         <div class="post">
-
+            <label id="poster3" class="poster"></label>
+            <label id="description3" class="description"></label>
+            <img src="" class="picture" alt="Decorative Shapes Icon" id="img3"/>
         </div>
         <div class="post">
-
+            <label id="poster4" class="poster"></label>
+            <label id="description4" class="description"></label>
+            <img src="" class="picture" alt="Decorative Shapes Icon" id="img4"/>
+        </div>
+        <div class="post" class="description">
+            <label id="poster5" class="poster"></label>
+            <label id="description5"></label>
+            <img src="" class="picture" alt="Decorative Shapes Icon" id="img5"/>
         </div>
     </div>
 
@@ -41,5 +57,8 @@
     <div class="footer">
         <img src="../../assets/global/loopLogo.png" alt="Decorative Shapes Icon" />
     </div>
+
+    <script src= "../js/global.js"></script>
+    <script src= "../js/feed.js"></script>
 </body>
 </html>
