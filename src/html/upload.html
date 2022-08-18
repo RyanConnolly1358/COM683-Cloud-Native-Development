@@ -25,7 +25,7 @@
         </ul>
     </div>
     <div class="mt-5">
-        <div>
+        <div class="mb-5">
             <h1 class="headers">Upload an Image!</h1>
             <div>
                 <label class="descLBL">Enter a description:</label>
@@ -46,22 +46,21 @@
             <label for="" hidden class="completeLBL" id="completePicLBL">Upload Complete!</label>
         </div>
 
-        <div>
+        <div class="mb-5">
             <h1 class="headers">Upload a Loop!</h1>
-            <div>
-                <label class="descLBL">Enter a description:</label>
-                <input type="text" class="description">
+            <div class="mt-5">
+                
             </div>
             <div id="drop-area">
                 <form class="my-form">
-                  <p>Upload a picture via drag and drop or the select button!</p>
-                  <input type="file" id="fileElem" multiple accept="image/*">
-                  <label class="button" for="fileElem">Select some files</label>
+                  <p>Use the button below to select your video!</p>
+                  <input type="file" id="fileElemVideo" multiple accept="video/mp4">
+                  
                   
                 </form>
-                
-                
             </div>
+            <button class="button" type="submit" id="submitBtnVid">Upload Video!</button>
+
         </div>
 
     </div>
