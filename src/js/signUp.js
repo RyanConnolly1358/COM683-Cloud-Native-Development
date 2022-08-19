@@ -24,6 +24,7 @@ SIGNUP_BUTTON.onclick = function(){
 
     request.onreadystatechange = (e) => {
         if(request.responseText == "\"accountCreated\": true"){
+            accountName = userName;
             document.location='/src/html/loops.html';
         }else{
             USERNAME_TXT.style.borderBlockColor = 'red';
