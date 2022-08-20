@@ -23,16 +23,20 @@ SIGNUP_BUTTON.onclick = function(){
     request.send(body);
 
     request.onreadystatechange = (e) => {
-        if(request.responseText == "\"accountCreated\": true"){
-            accountName = userName;
+        if (request.readyState == 4)  {  
+            console.log(request.status)
+            if(request.status == "200"){
+            accountName = USERNAME_TXT.value;
             document.location='/src/html/loops.html';
-        }else{
+            }else{
             USERNAME_TXT.style.borderBlockColor = 'red';
             PASSWORD_LBL.innerHTML = "Username already taken";
             PASSWORD_LBL.hidden = false;
             PASSWORD_LBL.style.color = 'red';
-
+            }
+                
         }
+        
 
    }
 
