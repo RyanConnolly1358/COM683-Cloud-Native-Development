@@ -135,35 +135,6 @@ body.onload = async function(){
 var serverResp = "none";
 
 async function getComments (postid){
-
-    // var data = {
-    //     imageURL: url,
-    //   };
-    // body = JSON.stringify(data);
-
-    // //Open request and send JSON Body
-    // const request = new XMLHttpRequest();
-    // request.open("POST", "https://prod-111.westeurope.logic.azure.com:443/workflows/470f5c5566a8416dbc340e332bfc2323/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=zyusfvmVw1ysdPj0thnuNrZuCFJtsVM6xV_NLqosGKM");
-    // //request.setRequestHeader("Accept", "application/json");
-    // request.setRequestHeader("Content-Type", "application/json");
-    // request.send(body);
-    // request.onreadystatechange = function() {
-    //     if (request.readyState == 4)  {  
-    //         const serverResponse = JSON.parse(request.responseText);
-    //         serverResp = serverResponse;
-    //         console.log(window.serverResp);
-            
-    //         }
-            
-    //     }
-    
-    // fetch("https://prod-13.westeurope.logic.azure.com/workflows/e1ebbaa7f00c4bf794ea3de52792524d/triggers/manual/paths/invoke/comments/"+postid+"?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=M98YyPt2OTk-qdrhaBisin_-dBO-eHfHQk7962gPyW4", {
-    //     method: "get",
-    // }).then((response) => response.json())
-    // .then((data) => {
-    //     console.log(data.value);
-    //     return data.value;
-    // })
    
     var commentResponse = await fetch("https://prod-13.westeurope.logic.azure.com/workflows/e1ebbaa7f00c4bf794ea3de52792524d/triggers/manual/paths/invoke/comments/"+postid+"?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=M98YyPt2OTk-qdrhaBisin_-dBO-eHfHQk7962gPyW4", {
         method: "get",
@@ -174,20 +145,12 @@ async function getComments (postid){
     console.log(listOfComments)
 
     return listOfComments;
-    // listOfComments.then(data => {
-    //     console.log(data);
-    //     serverResp = data;
-    // }) 
 
 
 }
 
 function commentSubmit(e) {
 
-
-    
-
-    
 
     switch(e.srcElement.id) {
         case "commentBtn1":
